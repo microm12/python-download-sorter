@@ -165,5 +165,4 @@ for file in os.listdir(folder_to_track):
         except Exception:
             extension='noname'
             path=extensions_folders[extension]
-        path+= file
-        shutil.move(folder_to_track + file, path)
+        shutil.move(folder_to_track + file, path + file)
