@@ -159,7 +159,6 @@ for folder in folders:
 
 for file in os.listdir(folder_to_track):
     if file not in folders and file != 'desktop.ini':
-        extension = 'noname'
         try:
             extension = str(os.path.splitext(folder_to_track + '/' + file)[1])
             path = extensions_folders[extension]
