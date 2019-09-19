@@ -158,7 +158,7 @@ for folder in folders:
         os.mkdir(folder_to_track + folder)
 
 for file in os.listdir(folder_to_track):
-    if file != 'Text' and file!='desktop.ini' and file!='Media' and file!='Other' and file!='Programming':
+    if file not in folders and file != 'desktop.ini':
         extension = 'noname'
         try:
             extension = str(os.path.splitext(folder_to_track + '/' + file)[1])
